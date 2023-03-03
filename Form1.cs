@@ -41,11 +41,20 @@ namespace PowerDesktop
                     // handle CSV file
                     string[] fileContents = File.ReadAllLines(fileName);
 
-
+                    bool isFirstIteration = true;
                     foreach (string line in fileContents)
                     {
-                        string[] values = line.Split(',');
-                        // process the values
+                        if (isFirstIteration)
+                        {
+                            isFirstIteration = false;
+                            continue;
+                        }
+                        else
+                        {
+                            string[] values = line.Split(',');
+                            dataGridView1.Rows.Add(values);
+                        }
+
                     }
 
                 }
