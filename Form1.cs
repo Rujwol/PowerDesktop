@@ -39,6 +39,15 @@ namespace PowerDesktop
                 if (Path.GetExtension(fileName) == ".csv")
                 {
                     // handle CSV file
+                    string[] fileContents = File.ReadAllLines(fileName);
+
+
+                    foreach (string line in fileContents)
+                    {
+                        string[] values = line.Split(',');
+                        // process the values
+                    }
+
                 }
                 else if (Path.GetExtension(fileName) == ".xml")
                 {
