@@ -88,6 +88,7 @@ namespace PowerDesktop
             // 
             this.ChooseFile.Location = new System.Drawing.Point(171, 135);
             this.ChooseFile.Name = "ChooseFile";
+            this.ChooseFile.ReadOnly = true;
             this.ChooseFile.Size = new System.Drawing.Size(125, 27);
             this.ChooseFile.TabIndex = 2;
             this.ChooseFile.Text = "Choose File";
@@ -100,7 +101,6 @@ namespace PowerDesktop
             this.Controls.Add(this.ChooseFile);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Choose_Click);
-            //this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
