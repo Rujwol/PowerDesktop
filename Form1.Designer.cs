@@ -36,6 +36,7 @@ namespace PowerDesktop
             this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ChooseFile = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.Evaluate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,14 +94,26 @@ namespace PowerDesktop
             this.ChooseFile.TabIndex = 2;
             this.ChooseFile.Text = "Choose File";
             // 
+            // Evaluate
+            // 
+            this.Evaluate.Location = new System.Drawing.Point(302, 374);
+            this.Evaluate.Name = "Evaluate";
+            this.Evaluate.Size = new System.Drawing.Size(146, 29);
+            this.Evaluate.TabIndex = 3;
+            this.Evaluate.Text = "Evaluate";
+            this.Evaluate.UseVisualStyleBackColor = true;
+            this.Evaluate.Click += new System.EventHandler(this.Evaluate_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Evaluate);
             this.Controls.Add(this.ChooseFile);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Choose_Click);
+            this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -118,6 +131,7 @@ namespace PowerDesktop
         private System.Windows.Forms.DataGridViewTextBoxColumn Salary;
         private System.Windows.Forms.TextBox ChooseFile;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Button Evaluate;
     }
 }
 

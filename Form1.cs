@@ -20,11 +20,11 @@ namespace PowerDesktop
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
         private void Choose_Click_Click(object sender, EventArgs e)
         {
-            
+
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "CSV files (*.csv)|*.csv|XML files (*.xml)|*.xml";
 
@@ -35,7 +35,7 @@ namespace PowerDesktop
                 string fileName = openFileDialog.FileName;
 
                 string[] fileNames = fileName.Split('\\');
-                ChooseFile.Text = fileNames[fileNames.Length-1];
+                ChooseFile.Text = fileNames[fileNames.Length - 1];
                 // check file extension and do conditional block
                 if (Path.GetExtension(fileName) == ".csv")
                 {
@@ -67,6 +67,11 @@ namespace PowerDesktop
                     // handle other file types
                 }
             }
+        }
+
+        private void Evaluate_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
