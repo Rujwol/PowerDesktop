@@ -71,7 +71,22 @@ namespace PowerDesktop
 
         private void Evaluate_Click(object sender, EventArgs e)
         {
+            int maxSalary = 0;
+            DataGridViewRow maxValRow = null;
 
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                int salary = int.Parse(row.Cells["Salary"].Value.ToString());
+                if (salary > maxSalary)
+                {
+                    maxSalary = salary;
+                    maxValRow = row;
+                }
+
+
+            }
+            //MessageBox.Show("Do you want to save your changes?", "Save changes?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            MessageBox.Show("Maximum salary value:"+" "+maxValRow.Cells["Name"].Value.ToString() + " " + maxValRow.Cells["Address"].Value.ToString() + " " + maxValRow.Cells["Salary"].Value.ToString());
         }
     }
 }

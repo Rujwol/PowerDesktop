@@ -52,6 +52,7 @@ namespace PowerDesktop
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Name,
@@ -113,7 +114,6 @@ namespace PowerDesktop
             this.Controls.Add(this.ChooseFile);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Choose_Click);
-            this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
