@@ -88,5 +88,23 @@ namespace PowerDesktop
             //MessageBox.Show("Do you want to save your changes?", "Save changes?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
             MessageBox.Show("Maximum salary value:"+" "+maxValRow.Cells["Name"].Value.ToString() + " " + maxValRow.Cells["Address"].Value.ToString() + " " + maxValRow.Cells["Salary"].Value.ToString());
         }
+
+        private void saveLoadedDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //this.Controls.Clear();
+            //this.Controls.Add(this.menuStrip1);
+            //this.Controls.Add(this.menuStrip2);
+            panel1.Visible = false;
+        }
+
+        private void detailDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Form1 form = new Form1();
+            //form.Show();
+            //below different thing
+            //this.Controls.Clear();
+            //InitializeComponent();
+            panel1.Visible = true;
+        }
     }
 }
